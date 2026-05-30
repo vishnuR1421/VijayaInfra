@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --color-gold-accent: #F37021; /* Rebranded to Vibrant Orange from logo arrow */
+  --color-gold-hover: #FF843D; /* Rebranded to Orange Hover */
+  --color-brand-blue: #006EA6; /* Corporate Deep Blue from logo */
+  --color-brand-blue-hover: #005B89;
+  --color-brand-yellow: #FDB813; /* Golden Yellow from logo icon */
+  
+  --color-dark-obsidian: #070A13; /* Premium Navy Obsidian background */
+  --color-dark-card: #0E121E; /* Premium Navy card */
+  --color-dark-card-hover: #151B2C;
+  --color-dark-border: #1D263B;
+  
+  --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-pulse-slow: pulse-slow 8s infinite alternate;
+  --animate-scan-y: scan-y 2.2s ease-in-out infinite;
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes pulse-slow {
+    0% {
+      transform: scale(1) translate(0px, 0px);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.1) translate(10px, -10px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1) translate(0px, 0px);
+      opacity: 0.3;
+    }
+  }
+  @keyframes scan-y {
+    0%, 100% {
+      transform: translateZ(180px);
+      opacity: 0.2;
+    }
+    50% {
+      transform: translateZ(15px);
+      opacity: 1;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --background: #070A13;
+  --foreground: #F8FAFC;
 }
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for premium look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070A13;
+}
+::-webkit-scrollbar-thumb {
+  background: #1D263B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F37021;
+}
+
+/* Smooth glassmorphic reflections */
+.glass-panel {
+  background: rgba(14, 18, 30, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-navbar {
+  background: rgba(7, 10, 19, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient text accents matching the logo's corporate-blue and vibrant-orange themes */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFFFFF 15%, #F37021 65%, #FDB813 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-bronze {
+  background: linear-gradient(135deg, #E2E8F0 10%, #006EA6 60%, #F37021 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Premium diagonal glass card hover reflection shine sweep effect */
+.glass-card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card-shine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -80%;
+  width: 35%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(35deg);
+  transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.glass-card-shine:hover::after {
+  left: 140%;
+}
+

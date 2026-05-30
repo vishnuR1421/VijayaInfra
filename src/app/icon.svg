@@ -1,0 +1,24 @@
+<svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tiered Building Silhouette - Blue & White -->
+  <path d="M22 80 L22 46 L28 40 L28 80 Z" fill="#005B8F" opacity="0.85" />
+  <path d="M28 80 L28 32 L36 24 L36 80 Z" fill="#006EA6" opacity="0.9" />
+  <path d="M36 80 L36 16 L46 8 L46 80 Z" fill="#006EA6" />
+  
+  <rect x="39" y="24" width="3" height="6" fill="#FFFFFF" opacity="0.9" />
+  <rect x="39" y="36" width="3" height="6" fill="#FFFFFF" opacity="0.9" />
+  <rect x="39" y="48" width="3" height="6" fill="#FFFFFF" opacity="0.9" />
+  <rect x="39" y="60" width="3" height="6" fill="#FFFFFF" opacity="0.9" />
+
+  <!-- The Stylized "V" Chevron Base -->
+  <path d="M12 84 L46 84 L40 82 L15 82 Z" fill="#F37021" />
+  <path d="M46 84 L88 84 L80 82 L50 82 Z" fill="#006EA6" />
+
+  <!-- Left blue arm of the "V" -->
+  <path d="M15 54 L39 82 L47 82 L21 50 Z" fill="#006EA6" />
+  
+  <!-- Inner Golden Arrow -->
+  <path d="M39 82 L65 42 L69 46 L43 85 Z" fill="#FDB813" />
+
+  <!-- Main Vibrant Orange Arrow -->
+  <path d="M43 83 L76 34 L71 29 L86 28 L84 43 L79 38 L47 86 Z" fill="#F37021" />
+</svg>
