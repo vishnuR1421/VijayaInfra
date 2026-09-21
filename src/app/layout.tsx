@@ -26,7 +26,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Vijaya Infrastructures Private Limited | Commercial Fit-Outs & Premium Interiors",
   description:
-    "Turnkey commercial fit-outs, retail store execution, corporate office interiors, electrical works, ACP & glass facades, and Design Nest residential interiors across South India.",
+    "Turnkey commercial fit-outs, retail store execution, corporate office interiors, electrical works, ACP & glass facades, and turnkey residential interiors across South India.",
   keywords: [
     "Vijaya Infrastructures Private Limited",
     "Commercial Fit-outs South India",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "Electrical Works South India",
     "ACP and Glass Facade Systems",
     "Style Union Contractor",
-    "Design Nest Interiors",
+    "Residential Interiors",
     "Office Fit-outs Hyderabad",
     "Turnkey Interior Contractor",
   ],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vijaya Infrastructures Private Limited | Commercial Fit-Outs & Premium Interiors",
     description:
-      "Turnkey commercial fit-outs, retail store execution, corporate office interiors, electrical works, ACP & glass facades, and Design Nest residential interiors across South India.",
+      "Turnkey commercial fit-outs, retail store execution, corporate office interiors, electrical works, ACP & glass facades, and turnkey residential interiors across South India.",
     url: "https://www.vijayainfrastructures.com",
     siteName: "Vijaya Infrastructures Private Limited",
     locale: "en_IN",
@@ -74,7 +74,7 @@ export default function RootLayout({
     "url": COMPANY_DETAILS.website,
     "logo": "https://www.vijayainfrastructures.com/logo.png",
     "description":
-      "Turnkey commercial fit-outs, retail store execution, commercial interiors, electrical installations, ACP & glass facade systems, and Design Nest residential interiors across South India.",
+      "Turnkey commercial fit-outs, retail store execution, commercial interiors, electrical installations, ACP & glass facade systems, and turnkey residential interiors across South India.",
     "foundingDate": "2015",
     "identifier": [
       {

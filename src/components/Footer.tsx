@@ -64,27 +64,9 @@ export default function Footer() {
               <Link href="/capabilities" className="hover:text-white hover:underline transition-colors">
                 Capabilities
               </Link>
-              <Link href="/design-nest" className="hover:text-white hover:underline transition-colors">
-                Design Nest Interiors
+              <Link href="/services/residential-interiors" className="hover:text-white hover:underline transition-colors">
+                Residential Interiors
               </Link>
-              <a
-                href={COMPANY_DETAILS.designNestWebsite}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white hover:underline transition-colors flex items-center gap-1 text-[#F96A02]"
-              >
-                <span>designnestinteriors.in</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-              <a
-                href={COMPANY_DETAILS.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white hover:underline transition-colors flex items-center gap-1 text-[#F96A02]"
-              >
-                <span>{COMPANY_DETAILS.instagram}</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
               <Link href="/contact" className="hover:text-white hover:underline transition-colors">
                 Contact & Enquiries
               </Link>

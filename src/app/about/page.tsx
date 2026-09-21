@@ -32,7 +32,7 @@ export default function AboutPage() {
               </h1>
               <p className="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
                 South India’s trusted single-source partner for retail store fit-outs, commercial
-                office interiors, electrical infrastructure, ACP & glass facades, and Design Nest residential interiors.
+                office interiors, electrical infrastructure, ACP & glass facades, and turnkey residential interiors.
               </p>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="max-w-xl mx-auto">
               {COMPANY_DETAILS.directors.map((director, idx) => (
                 <div
                   key={idx}

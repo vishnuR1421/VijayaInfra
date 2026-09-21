@@ -45,7 +45,7 @@ export default function CompanyIntro() {
               </div>
               <div className="flex items-start gap-2.5 text-xs text-slate-700 sm:col-span-2">
                 <CheckCircle2 className="w-4 h-4 text-[#006997] shrink-0 mt-0.5" />
-                <span>Dedicated residential division through Design Nest Interiors</span>
+                <span>Dedicated turnkey residential interior execution</span>
               </div>
             </div>
 

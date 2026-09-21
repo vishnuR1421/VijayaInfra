@@ -68,9 +68,6 @@ export const COMPANY_DETAILS = {
   email: "projects@vijayainfrastructures.com",
   website: "https://www.vijayainfrastructures.com",
   coverage: "South India (Telangana, Andhra Pradesh, Karnataka, Tamil Nadu)",
-  instagram: "@design_nest__",
-  instagramUrl: "https://www.instagram.com/design_nest__?stkn=MXExaWFsNW5yOTQ4bw==",
-  designNestWebsite: "https://designnestinteriors.in/",
   verifiedMetrics: {
     retailStoresDelivered: "20+",
     largestStoreSqFt: "~14,000",
@@ -84,12 +81,6 @@ export const COMPANY_DETAILS = {
       role: "Managing Director",
       description:
         "Directing overall strategic vision, commercial fit-out execution, multi-disciplinary engineering operations, and turnkey delivery standards across South India.",
-    },
-    {
-      name: "Ramya Sree Devireddy",
-      role: "Co-Founder",
-      description:
-        "Co-founding partner contributing to organizational foundation, corporate governance, and sustainable business development.",
     },
   ],
 };
@@ -279,13 +270,12 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     id: "residential-interiors",
     slug: "residential-interiors",
-    title: "Residential Interior Solutions — Design Nest Interiors",
-    shortTitle: "Residential Interiors (Design Nest)",
+    title: "Turnkey Residential Interiors",
+    shortTitle: "Residential Interiors",
     tagline: "Modular kitchens, wardrobes, and complete turnkey home interior execution",
-    division: "Design Nest Interiors",
     image: "/residential_interior.png",
     overview:
-      "Executed through our specialized interior division, Design Nest Interiors, we provide comprehensive turnkey home interior solutions. We combine factory-crafted modular precision with bespoke craftsmanship to deliver sophisticated living spaces for discerning homeowners.",
+      "We provide comprehensive turnkey home interior solutions, combining factory-crafted modular precision with bespoke craftsmanship to deliver sophisticated living spaces for discerning homeowners.",
     scope: [
       "Modular kitchens with premium fittings and quartz/granite tops",
       "Wardrobes and storage systems (sliding, hinged, walk-in closets)",
@@ -460,8 +450,8 @@ export const VERIFIED_PROJECTS: ProjectItem[] = [
     isVerified: true,
   },
   {
-    id: "design-nest-residence",
-    title: "Design Nest — Luxury Home Interior",
+    id: "residential-interior-residence",
+    title: "Luxury Home Interior",
     client: "Private Residential Client",
     city: "Hyderabad",
     state: "Telangana",
@@ -469,8 +459,8 @@ export const VERIFIED_PROJECTS: ProjectItem[] = [
     categoryLabel: "Residential Interiors",
     area: "Complete Home Interior",
     duration: "45 Days",
-    scope: "Executed through Design Nest Interiors: modular kitchen, custom wardrobes, living and bedroom styling, and cove lighting.",
-    highlight: "Design Nest Division",
+    scope: "Turnkey home interior: modular kitchen, custom wardrobes, living and bedroom styling, and cove lighting.",
+    highlight: "Residential Interiors",
     image: "/residential_interior.png",
     isVerified: true,
   },
@@ -527,5 +517,5 @@ export const ABOUT_STORY = {
   paragraph2:
     "The company builds on the operational experience of Vijaya Constructions, which has been delivering interior and fit-out projects since 2015. With expanding project scale and operations, the business has been structured under Vijaya Infrastructures Private Limited to undertake larger commercial contracts and multi-location retail rollouts.",
   paragraph3:
-    "The team has developed experience in large-format retail store fit-outs, fast-track interior execution, facade installations, and turnkey project delivery for commercial brands alongside bespoke residential interiors through Design Nest Interiors.",
+    "The team has developed experience in large-format retail store fit-outs, fast-track interior execution, facade installations, and turnkey project delivery for commercial brands alongside bespoke turnkey residential interiors.",
 };

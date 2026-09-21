@@ -10,7 +10,7 @@ import { CORE_SERVICES } from "@/data/company";
 export const metadata: Metadata = {
   title: "Core Services | Vijaya Infrastructures Private Limited",
   description:
-    "Comprehensive turnkey services: Retail & Commercial Interiors, Electrical Works & Infrastructure, ACP & Glass Facade Systems, Site Renovations & Modifications, and Residential Interiors (Design Nest).",
+    "Comprehensive turnkey services: Retail & Commercial Interiors, Electrical Works & Infrastructure, ACP & Glass Facade Systems, Site Renovations & Modifications, and Turnkey Residential Interiors.",
 };
 
 export default function ServicesPage() {

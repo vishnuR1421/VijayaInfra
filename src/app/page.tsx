@@ -43,7 +43,7 @@ export default function Home() {
         {/* 9. Capability Section */}
         <CapabilitiesSection />
 
-        {/* 10. Design Nest Section */}
+        {/* 10. Residential Interiors Section */}
         <DesignNest />
 
         {/* 11. Final CTA */}

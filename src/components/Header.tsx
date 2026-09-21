@@ -49,7 +49,7 @@ export default function Header() {
     { name: "Services", href: "/services", hasDropdown: true },
     { name: "Projects", href: "/projects" },
     { name: "Capabilities", href: "/capabilities" },
-    { name: "Design Nest", href: "/design-nest" },
+    { name: "Residential Interiors", href: "/services/residential-interiors" },
     { name: "Contact", href: "/contact" },
   ];
 

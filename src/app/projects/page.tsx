@@ -21,7 +21,7 @@ export default function ProjectsPage() {
     { id: "commercial", label: "Commercial Fit-Outs" },
     { id: "facade", label: "Facades & Storefronts" },
     { id: "renovation", label: "Renovations & Modifications" },
-    { id: "residential", label: "Residential (Design Nest)" },
+    { id: "residential", label: "Residential Interiors" },
   ];
 
   const filteredProjects =

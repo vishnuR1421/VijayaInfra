@@ -25,7 +25,7 @@ export default function Services() {
             <p className="text-sm text-slate-600 mt-3 leading-relaxed">
               We provide complete turnkey commercial fit-outs covering retail and office interiors,
               certified electrical infrastructure, ACP & glass facades, in-house site renovations,
-              and bespoke residential interiors through Design Nest.
+              and bespoke turnkey residential interiors.
             </p>
           </div>
 
@@ -251,7 +251,7 @@ export default function Services() {
             </Link>
           </div>
 
-          {/* 5. Residential Interiors — Design Nest Interiors (Span 6 - Visually Distinct Group Division) */}
+          {/* 5. Residential Interiors (Span 6 - Visually Distinct Home Execution) */}
           <div className="lg:col-span-6 corporate-card rounded-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between border-2 border-amber-300 bg-amber-50/30">
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -261,10 +261,10 @@ export default function Services() {
                   </div>
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700 block">
-                      Priority 2: Residential Division
+                      Turnkey Home Solutions
                     </span>
                     <h3 className="text-xl font-extrabold text-[#01477A]">
-                      Design Nest Interiors
+                      Residential Interiors
                     </h3>
                   </div>
                 </div>
@@ -298,10 +298,10 @@ export default function Services() {
             </div>
 
             <Link
-              href="/design-nest"
+              href="/services/residential-interiors"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 hover:text-amber-900 hover:underline"
             >
-              <span>Explore Design Nest Residential Division</span>
+              <span>Explore Residential Interiors</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

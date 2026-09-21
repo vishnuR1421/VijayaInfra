@@ -21,7 +21,7 @@ export default function Contact() {
   const rates = {
     civil: { rate: 1650, name: "Civil Construction", baseDays: 35, addedDaysPer1000SqFt: 5 },
     retail: { rate: 1100, name: "Retail & Commercial Interiors", baseDays: 23, addedDaysPer1000SqFt: 4 },
-    residential: { rate: 850, name: "Design Nest Home Interiors", baseDays: 30, addedDaysPer1000SqFt: 5 },
+    residential: { rate: 850, name: "Residential Home Interiors", baseDays: 30, addedDaysPer1000SqFt: 5 },
     facade: { rate: 380, name: "ACP & Glass Facade Works", baseDays: 20, addedDaysPer1000SqFt: 3 },
     electrical: { rate: 160, name: "Electrical System Works", baseDays: 15, addedDaysPer1000SqFt: 2 },
   };

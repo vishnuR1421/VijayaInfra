@@ -75,7 +75,7 @@ export default function ChatBot() {
 
       if (lower.includes("service") || lower.includes("offer") || lower.includes("what do you do")) {
         responseText =
-          "We deliver turnkey commercial fit-outs including retail stores & corporate offices, certified HT/LT electrical works, ACP & structural glass facades, and civil/structural modifications. We also have Design Nest Interiors for bespoke residential projects.";
+          "We deliver turnkey commercial fit-outs including retail stores & corporate offices, certified HT/LT electrical works, ACP & structural glass facades, and civil/structural modifications. We also deliver turnkey residential interior projects.";
         cta = { label: "View Services & Contact Us", href: "/contact" };
       } else if (lower.includes("time") || lower.includes("schedule") || lower.includes("fast") || lower.includes("duration") || lower.includes("days")) {
         responseText =
@@ -97,9 +97,9 @@ export default function ChatBot() {
         responseText =
           `You can reach our team at +91 ${COMPANY_DETAILS.phones[0]} or email ${COMPANY_DETAILS.email}. For complete inquiry submission and map directions, visit our Contact page.`;
         cta = { label: "Go to Contact Page", href: "/contact" };
-      } else if (lower.includes("design nest") || lower.includes("residential") || lower.includes("home") || lower.includes("villa") || lower.includes("apartment")) {
+      } else if (lower.includes("residential") || lower.includes("home") || lower.includes("villa") || lower.includes("apartment") || lower.includes("kitchen")) {
         responseText =
-          "Design Nest Interiors is our premium residential division, crafting bespoke living spaces, modular woodwork, and custom home interior solutions.";
+          "Our residential division crafts turnkey home interiors, bespoke living spaces, factory-finished modular woodwork, kitchens, and wardrobes.";
         cta = { label: "Inquire via Contact Page", href: "/contact" };
       } else {
         responseText =

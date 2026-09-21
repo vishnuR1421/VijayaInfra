@@ -49,8 +49,8 @@ export default function Hero() {
             <p className="text-base sm:text-lg text-slate-100 leading-relaxed max-w-2xl font-normal drop-shadow-sm">
               Vijaya Infrastructures Private Limited specializes in turnkey commercial
               fit-outs—combining retail and office interiors, certified electrical installations,
-              ACP & glass facades, and in-house site modifications—alongside bespoke residential
-              interiors through Design Nest Interiors across South India.
+              ACP & glass facades, and in-house site modifications—alongside bespoke turnkey residential
+              interiors across South India.
             </p>
 
             {/* CTAs */}
@@ -131,7 +131,7 @@ export default function Hero() {
                     3
                   </div>
                   <div>
-                    <span className="font-bold text-white block">Residential: Design Nest</span>
+                    <span className="font-bold text-white block">Residential Interiors</span>
                     <span className="text-slate-200">Modular kitchens, wardrobes, and complete turnkey home interiors.</span>
                   </div>
                 </div>

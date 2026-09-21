@@ -273,7 +273,7 @@ export default function ContactPage() {
                             className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-[#006997] focus:ring-1 focus:ring-[#006997] bg-white"
                           >
                             <option value="">Select project type</option>
-                            <option value="Residential Interior">Residential Interiors (Design Nest)</option>
+                            <option value="Residential Interior">Residential Interiors</option>
                             <option value="Retail Fit-out">Retail Store Fit-out</option>
                             <option value="Commercial Office">Commercial Office Interior</option>
                             <option value="Facade Systems">ACP & Glass Facade Systems</option>
