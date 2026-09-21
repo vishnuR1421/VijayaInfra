@@ -1,179 +1,311 @@
-"use client";
-
-import { useState } from "react";
-import { Building, Layout, Home, ChevronRight, CheckCircle } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight, Check, Sparkles, Layout, Zap, PanelsTopLeft, Home, Wrench } from "lucide-react";
+import { CORE_SERVICES } from "@/data/company";
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const services = [
-    {
-      id: "retail-interiors",
-      title: "Retail & Commercial Interiors",
-      tagline: "High-street retail showrooms & modular corporate spaces",
-      icon: <Layout className="w-5 h-5" />,
-      image: "/retail_interior.png",
-      description: "Our hallmark capability. We construct spaces that drive brand alignment and foot traffic. We handle complex mall approvals, midnight fabrication schedules, strict safety clearances, and precision finishes under fast timelines.",
-      points: [
-        "Mall and high-street brand showroom fit-outs",
-        "Fast-track rollouts (average 30-45 day delivery)",
-        "Bespoke brand fixture fabrication & retail displays",
-        "Functional, aesthetic commercial office architectures",
-        "Fully integrated electrical cabling & lighting setups"
-      ]
-    },
-    {
-      id: "civil",
-      title: "Civil Construction",
-      tagline: "Heavy-duty structural integrity and engineering excellence",
-      icon: <Building className="w-5 h-5" />,
-      image: "/hero_building.png",
-      description: "We handle end-to-end structural engineering and civil works. From initial excavation and piling to the final superstructure, our engineering team ensures extreme load tolerance, weather endurance, and compliance with high structural standards.",
-      points: [
-        "Residential & commercial multi-story building blocks",
-        "Complex structural modifications & architectural renovations",
-        "Foundations, RCC framing, and robust slab laying",
-        "Weatherproof Aluminium Composite Panel (ACP) external claddings",
-        "On-site project monitoring & heavy-equipment management"
-      ]
-    },
-    {
-      id: "residential-interiors",
-      title: "Design Nest Home Interiors",
-      tagline: "Tailored custom living spaces and exquisite home layouts",
-      icon: <Home className="w-5 h-5" />,
-      image: "/residential_interior.png",
-      description: "Our dedicated residential division, Design Nest Interiors. We design and install high-end, customized modular wardrobes, gourmet kitchens, and complete home decors that perfectly fuse contemporary luxury with daily utility.",
-      points: [
-        "Premium modular kitchens with soft-close mechanisms",
-        "Spacious custom wardrobes and walk-in closets",
-        "Bespoke wall styling, wooden paneling & ceiling lighting",
-        "End-to-end designer curated material selections",
-        "Full structural and finish warranties on all materials"
-      ]
-    }
-  ];
+  const retailService = CORE_SERVICES.find((s) => s.id === "retail-commercial-interiors")!;
+  const electricalService = CORE_SERVICES.find((s) => s.id === "electrical-works")!;
+  const facadeService = CORE_SERVICES.find((s) => s.id === "facade-systems")!;
+  const renovationService = CORE_SERVICES.find((s) => s.id === "site-renovations")!;
+  const residentialService = CORE_SERVICES.find((s) => s.id === "residential-interiors")!;
 
   return (
-    <section 
-      id="services" 
-      className="relative py-24 bg-dark-obsidian border-t border-slate-900/60 scroll-mt-20 overflow-hidden"
-    >
-      {/* Background glowing light orbs */}
-      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold-accent/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-brand-blue/15 blur-[120px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full z-10 relative">
-        
-        {/* Section Title */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-gold-accent block mb-2">
-            Engineering & Design
-          </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-            Our Core <span className="text-gradient-gold">Services</span>
-          </h2>
-          <p className="text-sm text-slate-400 mt-3 leading-relaxed">
-            Choose a service category to explore our turnkey contracting and interior capabilities.
-          </p>
-        </div>
-
-        {/* Layout: Selector + Display */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
-          
-          {/* Left Selector (Tabs) */}
-          <div className="lg:col-span-4 flex flex-col gap-3 justify-center">
-            {services.map((service, idx) => (
-              <button
-                key={service.id}
-                onClick={() => setActiveTab(idx)}
-                className={`flex items-center gap-3.5 p-4 rounded-xl border text-left transition-all duration-300 group cursor-pointer ${
-                  activeTab === idx
-                    ? "glass-panel border-gold-accent bg-gold-accent/5 text-white shadow-xl shadow-gold-accent/5"
-                    : "border-slate-850 bg-transparent text-slate-450 hover:text-slate-200 hover:border-slate-700/60"
-                }`}
-              >
-                <div className={`p-2.5 rounded-lg transition-colors duration-300 ${
-                  activeTab === idx
-                    ? "bg-gold-accent text-dark-obsidian"
-                    : "bg-slate-900 text-slate-400 group-hover:text-gold-accent"
-                }`}>
-                  {service.icon}
-                </div>
-                <div className="flex flex-col">
-                  <span className={`text-[10px] font-mono tracking-widest uppercase ${
-                    activeTab === idx ? "text-gold-accent" : "text-slate-500"
-                  }`}>
-                    CAPABILITY 0{idx + 1}
-                  </span>
-                  <span className="text-sm font-extrabold leading-tight mt-0.5">
-                    {service.title}
-                  </span>
-                </div>
-              </button>
-            ))}
+    <section id="services" className="py-20 md:py-28 bg-white border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div className="max-w-2xl">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#006997] block mb-2">
+              Core Capabilities
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#01477A] tracking-tight">
+              Specialized Execution Across <span className="text-[#F96A02]">Core Disciplines</span>
+            </h2>
+            <p className="text-sm text-slate-600 mt-3 leading-relaxed">
+              We provide complete turnkey commercial fit-outs covering retail and office interiors,
+              certified electrical infrastructure, ACP & glass facades, in-house site renovations,
+              and bespoke residential interiors through Design Nest.
+            </p>
           </div>
 
-          {/* Right Display Area */}
-          <div className="lg:col-span-8 glass-panel border border-slate-850 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-center relative overflow-hidden shadow-2xl animate-fade-in-up">
-            
-            {/* Image Frame */}
-            <div className="w-full md:w-5/12 h-48 md:h-64 rounded-xl overflow-hidden border border-slate-850 relative z-10 shrink-0">
-              <Image
-                src={services[activeTab].image}
-                alt={services[activeTab].title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-obsidian/60 via-transparent to-transparent" />
+          <Link
+            href="/services"
+            className="btn-secondary text-xs uppercase tracking-wider font-bold self-start md:self-auto"
+          >
+            <span>View All Services</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* 1. Flagship Service: Retail & Commercial Interiors (Span 12 - Strongest Visual Emphasis) */}
+          <div className="lg:col-span-12 corporate-card rounded-2xl overflow-hidden border-2 border-[#006997]/30 bg-gradient-to-r from-white via-white to-slate-50 p-6 md:p-10 relative">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 flex flex-col items-start gap-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#006997]/10 text-[#006997] text-[11px] font-extrabold uppercase tracking-wider">
+                  <Layout className="w-3.5 h-3.5" />
+                  <span>Priority 1: Commercial Fit-Outs • Flagship Specialization</span>
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#01477A] leading-tight">
+                  {retailService.title}
+                </h3>
+
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {retailService.overview}
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full pt-2">
+                  {retailService.scope.map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                      <Check className="w-3.5 h-3.5 text-[#F96A02] shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pt-4 flex flex-wrap items-center gap-4">
+                  <Link
+                    href={`/services/${retailService.slug}`}
+                    className="btn-primary text-xs uppercase tracking-wider font-bold"
+                  >
+                    <span>Explore Retail & Interiors</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <span className="text-xs text-slate-500 font-semibold">
+                    Typical timeline: 30–45 Days • 23-Day record handover
+                  </span>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 h-64 sm:h-80 relative rounded-xl overflow-hidden shadow-md border border-slate-200">
+                <Image
+                  src={retailService.image}
+                  alt={retailService.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#01477A]/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <span className="text-[10px] uppercase tracking-wider font-bold text-[#F96A02] block">
+                    Verified Execution
+                  </span>
+                  <span className="text-sm font-bold">
+                    20+ Retail Outlets Completed Across South India
+                  </span>
+                </div>
+              </div>
             </div>
+          </div>
 
-            {/* Text Frame */}
-            <div className="w-full md:w-7/12 flex flex-col items-start justify-center gap-3.5 relative z-10 text-left">
-              <span className="text-[9px] font-mono font-bold tracking-widest text-gold-accent uppercase bg-gold-accent/10 px-2 py-0.5 rounded border border-gold-accent/20">
-                Active Category
-              </span>
-              
-              <h3 className="text-xl md:text-2xl font-black text-white leading-tight">
-                {services[activeTab].title}
-              </h3>
-              
-              <p className="text-xs font-bold text-slate-400 italic leading-snug">
-                "{services[activeTab].tagline}"
+          {/* 2. Electrical Works (Span 6) */}
+          <div className="lg:col-span-6 corporate-card rounded-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 rounded bg-[#006997]/10 text-[#006997]">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
+                    Commercial Fit-Out
+                  </span>
+                  <h3 className="text-xl font-extrabold text-[#01477A]">
+                    {electricalService.title}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="h-48 relative rounded-lg overflow-hidden mb-5 border border-slate-100">
+                <Image
+                  src={electricalService.image}
+                  alt={electricalService.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+
+              <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                {electricalService.overview}
               </p>
 
-              <p className="text-xs text-slate-400 leading-relaxed mt-1">
-                {services[activeTab].description}
-              </p>
-
-              {/* Point Checklist */}
-              <div className="flex flex-col gap-2 mt-2 w-full">
-                {services[activeTab].points.map((point, index) => (
-                  <div key={index} className="flex items-start gap-2.5 text-slate-300">
-                    <CheckCircle className="w-3.5 h-3.5 text-gold-accent mt-0.5 shrink-0" />
-                    <span className="text-[11px] leading-relaxed">{point}</span>
+              <div className="space-y-2 mb-6">
+                {electricalService.scope.slice(0, 3).map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                    <Check className="w-3.5 h-3.5 text-[#006997] shrink-0 mt-0.5" />
+                    <span>{item}</span>
                   </div>
                 ))}
               </div>
-
-              {/* Contact Anchor */}
-              <a 
-                href="#estimator"
-                className="inline-flex items-center gap-1.5 text-[9px] font-bold text-gold-accent uppercase tracking-widest hover:text-white transition-colors duration-300 mt-4 group"
-              >
-                <span>Request Bid Quote</span>
-                <ChevronRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
-
             </div>
 
+            <Link
+              href={`/services/${electricalService.slug}`}
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#006997] hover:text-[#01477A] hover:underline"
+            >
+              <span>Learn More About Electrical Works</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
 
-        </div>
+          {/* 3. ACP & Glass Facade Systems (Span 6) */}
+          <div className="lg:col-span-6 corporate-card rounded-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 rounded bg-[#01477A]/10 text-[#01477A]">
+                  <PanelsTopLeft className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
+                    Commercial Fit-Out
+                  </span>
+                  <h3 className="text-xl font-extrabold text-[#01477A]">
+                    {facadeService.title}
+                  </h3>
+                </div>
+              </div>
 
+              <div className="h-48 relative rounded-lg overflow-hidden mb-5 border border-slate-100">
+                <Image
+                  src={facadeService.image}
+                  alt={facadeService.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+
+              <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                {facadeService.overview}
+              </p>
+
+              <div className="space-y-2 mb-6">
+                {facadeService.scope.slice(0, 3).map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                    <Check className="w-3.5 h-3.5 text-[#006997] shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              href={`/services/${facadeService.slug}`}
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#006997] hover:text-[#01477A] hover:underline"
+            >
+              <span>Learn More About Facades</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          {/* 4. Site Renovations & Civil Modifications (Span 6) */}
+          <div className="lg:col-span-6 corporate-card rounded-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 rounded bg-[#006997]/10 text-[#006997]">
+                  <Wrench className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
+                    Integrated Capability
+                  </span>
+                  <h3 className="text-xl font-extrabold text-[#01477A]">
+                    {renovationService.title}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="h-48 relative rounded-lg overflow-hidden mb-5 border border-slate-100">
+                <Image
+                  src={renovationService.image}
+                  alt={renovationService.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+
+              <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                {renovationService.overview}
+              </p>
+
+              <div className="space-y-2 mb-6">
+                {renovationService.scope.slice(0, 3).map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                    <Check className="w-3.5 h-3.5 text-[#006997] shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              href={`/services/${renovationService.slug}`}
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#006997] hover:text-[#01477A] hover:underline"
+            >
+              <span>Learn More About Renovations</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          {/* 5. Residential Interiors — Design Nest Interiors (Span 6 - Visually Distinct Group Division) */}
+          <div className="lg:col-span-6 corporate-card rounded-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between border-2 border-amber-300 bg-amber-50/30">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded bg-amber-500/10 text-amber-700">
+                    <Home className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700 block">
+                      Priority 2: Residential Division
+                    </span>
+                    <h3 className="text-xl font-extrabold text-[#01477A]">
+                      Design Nest Interiors
+                    </h3>
+                  </div>
+                </div>
+                <span className="px-2.5 py-1 rounded bg-amber-100 text-amber-800 font-bold text-[10px] uppercase">
+                  Residential
+                </span>
+              </div>
+
+              <div className="h-48 relative rounded-lg overflow-hidden mb-5 border border-amber-200">
+                <Image
+                  src={residentialService.image}
+                  alt={residentialService.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+
+              <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                {residentialService.overview}
+              </p>
+
+              <div className="space-y-2 mb-6">
+                {residentialService.scope.slice(0, 3).map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              href="/design-nest"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 hover:text-amber-900 hover:underline"
+            >
+              <span>Explore Design Nest Residential Division</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
